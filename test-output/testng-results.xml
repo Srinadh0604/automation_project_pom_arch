@@ -11,7 +11,7 @@
       <![CDATA[login test started]]>
     </line>
     <line>
-      <![CDATA[firefox]]>
+      <![CDATA[edge]]>
     </line>
     <line>
       <![CDATA[login test started]]>
@@ -32,7 +32,7 @@
       <![CDATA[login test started]]>
     </line>
     <line>
-      <![CDATA[firefox]]>
+      <![CDATA[edge]]>
     </line>
     <line>
       <![CDATA[login test started]]>
@@ -53,7 +53,7 @@
       <![CDATA[login test started]]>
     </line>
     <line>
-      <![CDATA[firefox]]>
+      <![CDATA[edge]]>
     </line>
     <line>
       <![CDATA[login test started]]>
@@ -68,20 +68,20 @@
       <![CDATA[Browser is closing]]>
     </line>
   </reporter-output>
-  <suite started-at="2026-01-09T22:08:08 IST" name="OrangeHRM Suite" finished-at="2026-01-09T22:09:43 IST" duration-ms="94390">
+  <suite started-at="2026-01-11T13:56:42 IST" name="OrangeHRM Suite" finished-at="2026-01-11T13:56:49 IST" duration-ms="6503">
     <groups>
     </groups>
-    <test started-at="2026-01-09T22:08:08 IST" name="Chrome Test" finished-at="2026-01-09T22:09:43 IST" duration-ms="94390">
+    <test started-at="2026-01-11T13:56:42 IST" name="EDGE Test" finished-at="2026-01-11T13:56:49 IST" duration-ms="6503">
       <class name="orangehrm.pagestest.LoginPageTest">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:orangehrm.pagestest.LoginPageTest@378542de]" started-at="2026-01-09T22:08:08 IST" name="beforeClass" finished-at="2026-01-09T22:08:08 IST" duration-ms="15" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:orangehrm.pagestest.LoginPageTest@378542de]" started-at="2026-01-11T13:56:42 IST" name="beforeClass" finished-at="2026-01-11T13:56:42 IST" duration-ms="15" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:orangehrm.pagestest.LoginPageTest@378542de]" started-at="2026-01-09T22:08:09 IST" name="beforeMethod" finished-at="2026-01-09T22:08:27 IST" duration-ms="18028" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:orangehrm.pagestest.LoginPageTest@378542de]" started-at="2026-01-11T13:56:42 IST" name="beforeMethod" finished-at="2026-01-11T13:56:45 IST" duration-ms="2618" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[firefox]]>
+                <![CDATA[edge]]>
               </value>
             </param>
           </params>
@@ -93,11 +93,11 @@
               <![CDATA[login test started]]>
             </line>
             <line>
-              <![CDATA[firefox]]>
+              <![CDATA[edge]]>
             </line>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:orangehrm.pagestest.LoginPageTest@378542de]" started-at="2026-01-09T22:08:27 IST" name="loginTest" data-provider="loginData" finished-at="2026-01-09T22:08:36 IST" duration-ms="9913" status="PASS">
+        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:orangehrm.pagestest.LoginPageTest@378542de]" started-at="2026-01-11T13:56:45 IST" name="loginTest" data-provider="loginData" finished-at="2026-01-11T13:56:45 IST" duration-ms="66" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -122,18 +122,18 @@
             </line>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:orangehrm.pagestest.LoginPageTest@378542de]" started-at="2026-01-09T22:08:36 IST" name="afterMethod" finished-at="2026-01-09T22:08:38 IST" duration-ms="1644" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:orangehrm.pagestest.LoginPageTest@378542de]" started-at="2026-01-11T13:56:45 IST" name="afterMethod" finished-at="2026-01-11T13:56:45 IST" duration-ms="1" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Browser is closing]]>
             </line>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:orangehrm.pagestest.LoginPageTest@378542de]" started-at="2026-01-09T22:08:38 IST" name="beforeMethod" finished-at="2026-01-09T22:08:53 IST" duration-ms="15112" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:orangehrm.pagestest.LoginPageTest@378542de]" started-at="2026-01-11T13:56:45 IST" name="beforeMethod" finished-at="2026-01-11T13:56:46 IST" duration-ms="1384" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[firefox]]>
+                <![CDATA[edge]]>
               </value>
             </param>
           </params>
@@ -145,11 +145,11 @@
               <![CDATA[login test started]]>
             </line>
             <line>
-              <![CDATA[firefox]]>
+              <![CDATA[edge]]>
             </line>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:orangehrm.pagestest.LoginPageTest@378542de]" started-at="2026-01-09T22:08:53 IST" name="loginTest" data-provider="loginData" finished-at="2026-01-09T22:09:06 IST" duration-ms="12960" status="PASS">
+        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:orangehrm.pagestest.LoginPageTest@378542de]" started-at="2026-01-11T13:56:46 IST" name="loginTest" data-provider="loginData" finished-at="2026-01-11T13:56:47 IST" duration-ms="6" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -174,18 +174,18 @@
             </line>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:orangehrm.pagestest.LoginPageTest@378542de]" started-at="2026-01-09T22:09:06 IST" name="afterMethod" finished-at="2026-01-09T22:09:08 IST" duration-ms="1702" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:orangehrm.pagestest.LoginPageTest@378542de]" started-at="2026-01-11T13:56:47 IST" name="afterMethod" finished-at="2026-01-11T13:56:47 IST" duration-ms="1" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Browser is closing]]>
             </line>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:orangehrm.pagestest.LoginPageTest@378542de]" started-at="2026-01-09T22:09:08 IST" name="beforeMethod" finished-at="2026-01-09T22:09:27 IST" duration-ms="18811" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:orangehrm.pagestest.LoginPageTest@378542de]" started-at="2026-01-11T13:56:47 IST" name="beforeMethod" finished-at="2026-01-11T13:56:49 IST" duration-ms="2308" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[firefox]]>
+                <![CDATA[edge]]>
               </value>
             </param>
           </params>
@@ -197,11 +197,11 @@
               <![CDATA[login test started]]>
             </line>
             <line>
-              <![CDATA[firefox]]>
+              <![CDATA[edge]]>
             </line>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:orangehrm.pagestest.LoginPageTest@378542de]" started-at="2026-01-09T22:09:27 IST" name="loginTest" data-provider="loginData" finished-at="2026-01-09T22:09:41 IST" duration-ms="14456" status="PASS">
+        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:orangehrm.pagestest.LoginPageTest@378542de]" started-at="2026-01-11T13:56:49 IST" name="loginTest" data-provider="loginData" finished-at="2026-01-11T13:56:49 IST" duration-ms="4" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -226,18 +226,18 @@
             </line>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:orangehrm.pagestest.LoginPageTest@378542de]" started-at="2026-01-09T22:09:41 IST" name="afterMethod" finished-at="2026-01-09T22:09:43 IST" duration-ms="1651" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:orangehrm.pagestest.LoginPageTest@378542de]" started-at="2026-01-11T13:56:49 IST" name="afterMethod" finished-at="2026-01-11T13:56:49 IST" duration-ms="1" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Browser is closing]]>
             </line>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:orangehrm.pagestest.LoginPageTest@378542de]" started-at="2026-01-09T22:09:43 IST" name="afterClass" finished-at="2026-01-09T22:09:43 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:orangehrm.pagestest.LoginPageTest@378542de]" started-at="2026-01-11T13:56:49 IST" name="afterClass" finished-at="2026-01-11T13:56:49 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- orangehrm.pagestest.LoginPageTest -->
-    </test> <!-- Chrome Test -->
+    </test> <!-- EDGE Test -->
   </suite> <!-- OrangeHRM Suite -->
 </testng-results>
