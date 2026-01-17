@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="HerokuApp Automation Suite">
+
+ <parameter name="browser" value="chrome"/>
+
+    <test name="Smoke Tests">
+
+        <classes>
+        <!-- 
+            <class name="pagestest.AddRemoveElementsTest"/>
+            <class name="pagestest.CheckboxesTest"/>
+            <class name="pagestest.DropdownTest"/>
+            <class name="pagestest.DynamicLoadingTest"/>
+            <class name="pagestest.MultipleWindowsTest"/>
+              <class name="pagestest.JavaScriptAlertsTest"/>
+            -->
+            <class name="pagestest.IFrameTest"/>
+        </classes>
+
+    </test>
+
+</suite>
