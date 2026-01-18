@@ -8,14 +8,14 @@
 
         <classes>
         <!-- 
-            <class name="pagestest.AddRemoveElementsTest"/>
-            <class name="pagestest.CheckboxesTest"/>
-            <class name="pagestest.DropdownTest"/>
-            <class name="pagestest.DynamicLoadingTest"/>
-            <class name="pagestest.MultipleWindowsTest"/>
-              <class name="pagestest.JavaScriptAlertsTest"/>
-            -->
-            <class name="pagestest.IFrameTest"/>
+            <class name="herokuapp.pagestest.AddRemoveElementsTest"/>
+            <class name="herokuapp.pagestest.CheckboxesTest"/>
+            <class name="herokuapp.pagestest.DropdownTest"/>
+            <class name="herokuapp.pagestest.DynamicLoadingTest"/>
+            <class name="herokuapp.pagestest.MultipleWindowsTest"/>
+              <class name="herokuapp.pagestest.JavaScriptAlertsTest"/>
+           -->
+      <!--      <class name="pagestest.IFrameTest"/>  --> 
         </classes>
 
     </test>
