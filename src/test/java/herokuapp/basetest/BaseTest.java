@@ -92,16 +92,28 @@ public class BaseTest {
     public void tearDown(ITestResult result) {
 
         if (result.getStatus() == ITestResult.FAILURE) {
-            String path =
-                ScreenshotUtil.captureScreenshot(driver, result.getName());
-            test.fail(result.getThrowable());
-            test.addScreenCaptureFromPath(path);
+            try {
+                String path =
+                    ScreenshotUtil.captureScreenshot(driver, result.getName());
+                test.fail(result.getThrowable());
+                test.addScreenCaptureFromPath(path);
+            } catch (Exception e) {
+                System.out.println("⚠ Screenshot capture failed: " + e.getMessage());
+                test.warning("Screenshot capture failed: " + e.getMessage());
+            }
         } else if (result.getStatus() == ITestResult.SUCCESS) {
             test.pass("Test passed successfully");
         }
 
-        driver.quit();
+        try {
+            if (driver != null) {
+                driver.quit();
+            }
+        } catch (Exception e) {
+            System.out.println("⚠ Driver quit failed: " + e.getMessage());
+        }
     }
+
     
 //	@AfterMethod
 //	public void tearDown(ITestResult result) {

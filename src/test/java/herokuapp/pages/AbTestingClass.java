@@ -1,13 +1,26 @@
 package herokuapp.pages;
 
+
+
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
-import org.testng.Reporter;
-import org.testng.log4testng.Logger;
 
-import orangehrm.pages.LoginPage;
+public class AbTestingClass{
 
-public class AbTestingClass {
+    private WebDriver driver;
+
+    public AbTestingClass(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    public void openABTestingPage(String baseUrl, String path) {
+        driver.get(baseUrl + path);
+    }
+
+    public boolean isABTestTextPresent() {
+        return driver.getPageSource().contains("A/B Test");
+    }
+}
+
 
 
 //    private static final Logger log =
@@ -20,4 +33,4 @@ public class AbTestingClass {
 //        this.driver = driver;
 //        PageFactory.initElements(driver, this);
 //    }
-}
+

@@ -1,187 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-18T12:52:02 IST" name="HerokuApp Automation Suite" finished-at="2026-01-18T12:53:14 IST" duration-ms="72005">
+  <suite started-at="2026-01-20T18:13:22 IST" name="HerokuApp Automation Suite" finished-at="2026-01-20T18:13:31 IST" duration-ms="9176">
     <groups>
     </groups>
-    <test started-at="2026-01-18T12:52:02 IST" name="Smoke Tests" finished-at="2026-01-18T12:53:14 IST" duration-ms="72005">
-      <class name="herokuapp.pagestest.CheckboxesTest">
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:herokuapp.pagestest.CheckboxesTest@ae13544]" started-at="2026-01-18T12:52:18 IST" name="setUp" finished-at="2026-01-18T12:52:19 IST" duration-ms="1292" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void herokuapp.pagestest.CheckboxesTest.verifyCheckboxSelectionBehavior()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyCheckboxSelectionBehavior()[pri:0, instance:herokuapp.pagestest.CheckboxesTest@ae13544]" started-at="2026-01-18T12:52:19 IST" name="verifyCheckboxSelectionBehavior" finished-at="2026-01-18T12:52:27 IST" duration-ms="8256" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyCheckboxSelectionBehavior -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:herokuapp.pagestest.CheckboxesTest@ae13544]" started-at="2026-01-18T12:52:27 IST" name="tearDown" finished-at="2026-01-18T12:52:28 IST" duration-ms="590" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyCheckboxSelectionBehavior status=SUCCESS method=CheckboxesTest.verifyCheckboxSelectionBehavior()[pri:0, instance:herokuapp.pagestest.CheckboxesTest@ae13544] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- herokuapp.pagestest.CheckboxesTest -->
-      <class name="herokuapp.pagestest.DropdownTest">
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:herokuapp.pagestest.DropdownTest@3d34d211]" started-at="2026-01-18T12:52:28 IST" name="setUp" finished-at="2026-01-18T12:52:29 IST" duration-ms="1231" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void herokuapp.pagestest.DropdownTest.verifyDropdownSelection()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyDropdownSelection()[pri:0, instance:herokuapp.pagestest.DropdownTest@3d34d211]" started-at="2026-01-18T12:52:29 IST" name="verifyDropdownSelection" finished-at="2026-01-18T12:52:36 IST" duration-ms="7014" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyDropdownSelection -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:herokuapp.pagestest.DropdownTest@3d34d211]" started-at="2026-01-18T12:52:36 IST" name="tearDown" finished-at="2026-01-18T12:52:37 IST" duration-ms="594" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyDropdownSelection status=SUCCESS method=DropdownTest.verifyDropdownSelection()[pri:0, instance:herokuapp.pagestest.DropdownTest@3d34d211] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- herokuapp.pagestest.DropdownTest -->
-      <class name="herokuapp.pagestest.JavaScriptAlertsTest">
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:herokuapp.pagestest.JavaScriptAlertsTest@43c1b556]" started-at="2026-01-18T12:53:02 IST" name="setUp" finished-at="2026-01-18T12:53:03 IST" duration-ms="1240" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void herokuapp.pagestest.JavaScriptAlertsTest.verifyJavaScriptAlerts()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyJavaScriptAlerts()[pri:0, instance:herokuapp.pagestest.JavaScriptAlertsTest@43c1b556]" started-at="2026-01-18T12:53:03 IST" name="verifyJavaScriptAlerts" finished-at="2026-01-18T12:53:13 IST" duration-ms="9956" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyJavaScriptAlerts -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:herokuapp.pagestest.JavaScriptAlertsTest@43c1b556]" started-at="2026-01-18T12:53:13 IST" name="tearDown" finished-at="2026-01-18T12:53:14 IST" duration-ms="491" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyJavaScriptAlerts status=SUCCESS method=JavaScriptAlertsTest.verifyJavaScriptAlerts()[pri:0, instance:herokuapp.pagestest.JavaScriptAlertsTest@43c1b556] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- herokuapp.pagestest.JavaScriptAlertsTest -->
-      <class name="herokuapp.pagestest.DynamicLoadingTest">
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:herokuapp.pagestest.DynamicLoadingTest@7dc0f706]" started-at="2026-01-18T12:52:37 IST" name="setUp" finished-at="2026-01-18T12:52:38 IST" duration-ms="1288" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void herokuapp.pagestest.DynamicLoadingTest.verifyDynamicLoading()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyDynamicLoading()[pri:0, instance:herokuapp.pagestest.DynamicLoadingTest@7dc0f706]" started-at="2026-01-18T12:52:38 IST" name="verifyDynamicLoading" finished-at="2026-01-18T12:52:52 IST" duration-ms="13988" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyDynamicLoading -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:herokuapp.pagestest.DynamicLoadingTest@7dc0f706]" started-at="2026-01-18T12:52:52 IST" name="tearDown" finished-at="2026-01-18T12:52:53 IST" duration-ms="720" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyDynamicLoading status=SUCCESS method=DynamicLoadingTest.verifyDynamicLoading()[pri:0, instance:herokuapp.pagestest.DynamicLoadingTest@7dc0f706] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- herokuapp.pagestest.DynamicLoadingTest -->
-      <class name="herokuapp.pagestest.MultipleWindowsTest">
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:herokuapp.pagestest.MultipleWindowsTest@4009e306]" started-at="2026-01-18T12:52:53 IST" name="setUp" finished-at="2026-01-18T12:52:54 IST" duration-ms="1240" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void herokuapp.pagestest.MultipleWindowsTest.verifyMultipleWindowsHandling()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyMultipleWindowsHandling()[pri:0, instance:herokuapp.pagestest.MultipleWindowsTest@4009e306]" started-at="2026-01-18T12:52:54 IST" name="verifyMultipleWindowsHandling" finished-at="2026-01-18T12:53:01 IST" duration-ms="7252" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyMultipleWindowsHandling -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:herokuapp.pagestest.MultipleWindowsTest@4009e306]" started-at="2026-01-18T12:53:01 IST" name="tearDown" finished-at="2026-01-18T12:53:02 IST" duration-ms="512" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyMultipleWindowsHandling status=SUCCESS method=MultipleWindowsTest.verifyMultipleWindowsHandling()[pri:0, instance:herokuapp.pagestest.MultipleWindowsTest@4009e306] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- herokuapp.pagestest.MultipleWindowsTest -->
-      <class name="herokuapp.pagestest.AddRemoveElementsTest">
-        <test-method is-config="true" signature="startReport()[pri:0, instance:herokuapp.pagestest.AddRemoveElementsTest@7c9d8e2]" started-at="2026-01-18T12:52:01 IST" name="startReport" finished-at="2026-01-18T12:52:02 IST" duration-ms="479" status="PASS">
+    <test started-at="2026-01-20T18:13:22 IST" name="Smoke Tests" finished-at="2026-01-20T18:13:31 IST" duration-ms="9176">
+      <class name="herokuapp.pagestest.GeolocationTest">
+        <test-method is-config="true" signature="startReport()[pri:0, instance:herokuapp.pagestest.GeolocationTest@7d20d0b]" started-at="2026-01-20T18:13:21 IST" name="startReport" finished-at="2026-01-20T18:13:22 IST" duration-ms="458" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:herokuapp.pagestest.AddRemoveElementsTest@7c9d8e2]" started-at="2026-01-18T12:52:02 IST" name="setUp" finished-at="2026-01-18T12:52:09 IST" duration-ms="7791" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:herokuapp.pagestest.GeolocationTest@7d20d0b]" started-at="2026-01-20T18:13:22 IST" name="setUp" finished-at="2026-01-20T18:13:25 IST" duration-ms="2919" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void herokuapp.pagestest.AddRemoveElementsTest.verifyAddAndRemoveElements()]]>
+                <![CDATA[public void herokuapp.pagestest.GeolocationTest.verifyGeolocationButtonClick()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyAddAndRemoveElements()[pri:0, instance:herokuapp.pagestest.AddRemoveElementsTest@7c9d8e2]" started-at="2026-01-18T12:52:09 IST" name="verifyAddAndRemoveElements" finished-at="2026-01-18T12:52:17 IST" duration-ms="7759" status="PASS">
+        <test-method signature="verifyGeolocationButtonClick()[pri:0, instance:herokuapp.pagestest.GeolocationTest@7d20d0b]" started-at="2026-01-20T18:13:25 IST" name="verifyGeolocationButtonClick" finished-at="2026-01-20T18:13:30 IST" duration-ms="5538" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAddAndRemoveElements -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:herokuapp.pagestest.AddRemoveElementsTest@7c9d8e2]" started-at="2026-01-18T12:52:17 IST" name="tearDown" finished-at="2026-01-18T12:52:18 IST" duration-ms="690" status="PASS">
+        </test-method> <!-- verifyGeolocationButtonClick -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:herokuapp.pagestest.GeolocationTest@7d20d0b]" started-at="2026-01-20T18:13:30 IST" name="tearDown" finished-at="2026-01-20T18:13:31 IST" duration-ms="664" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyAddAndRemoveElements status=SUCCESS method=AddRemoveElementsTest.verifyAddAndRemoveElements()[pri:0, instance:herokuapp.pagestest.AddRemoveElementsTest@7c9d8e2] output={null}]]]>
+                <![CDATA[[TestResult name=verifyGeolocationButtonClick status=SUCCESS method=GeolocationTest.verifyGeolocationButtonClick()[pri:0, instance:herokuapp.pagestest.GeolocationTest@7d20d0b] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="flushReport()[pri:0, instance:herokuapp.pagestest.AddRemoveElementsTest@7c9d8e2]" started-at="2026-01-18T12:53:14 IST" name="flushReport" finished-at="2026-01-18T12:53:15 IST" duration-ms="1747" status="PASS">
+        <test-method is-config="true" signature="flushReport()[pri:0, instance:herokuapp.pagestest.GeolocationTest@7d20d0b]" started-at="2026-01-20T18:13:31 IST" name="flushReport" finished-at="2026-01-20T18:13:33 IST" duration-ms="1669" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flushReport -->
-      </class> <!-- herokuapp.pagestest.AddRemoveElementsTest -->
+      </class> <!-- herokuapp.pagestest.GeolocationTest -->
     </test> <!-- Smoke Tests -->
   </suite> <!-- HerokuApp Automation Suite -->
 </testng-results>

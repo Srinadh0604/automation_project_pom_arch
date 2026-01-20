@@ -14,8 +14,25 @@
             <class name="herokuapp.pagestest.DynamicLoadingTest"/>
             <class name="herokuapp.pagestest.MultipleWindowsTest"/>
               <class name="herokuapp.pagestest.JavaScriptAlertsTest"/>
+              <class name="herokuapp.pagestest.ABTestingTest"/> 
+              <class name="herokuapp.pagestest.InputsTest"/> 
+            <class name="herokuapp.pagestest.HoversTest"/> 
+            <class name="herokuapp.pagestest.ContextMenuTest"/> 
+            <class name="herokuapp.pagestest.DragDropTest"/> 
+            <class name="herokuapp.pagestest.InfiniteScrollTest"/> 
+             <class name="herokuapp.pagestest.StatusCodesTest"/> 
+              <class name="herokuapp.pagestest.NotificationMessagesTest"/> 
+              <class name="herokuapp.pagestest.DisappearingElementsTest"/> 
+               <class name="herokuapp.pagestest.KeyPressesTest"/>   
+                <class name="herokuapp.pagestest.TyposTest"/>  
+                 <class name="herokuapp.pagestest.DynamicControlsTest"/>  
+                  <class name="herokuapp.pagestest.HorizontalSliderTest"/>   
+                   <class name="herokuapp.pagestest.RedirectTest"/> 
+                     <class name="herokuapp.pagestest.ChallengingDomTest"/> 
            -->
-      <!--      <class name="pagestest.IFrameTest"/>  --> 
+                  
+                  
+                 <class name="herokuapp.pagestest.GeolocationTest"/>   
         </classes>
 
     </test>
