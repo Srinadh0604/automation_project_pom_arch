@@ -9,6 +9,7 @@ public class HorizontalSliderPage {
 
     private WebDriver driver;
     private By slider = By.tagName("input");
+    private By rangeValue = By.id("range");
 
     public HorizontalSliderPage(WebDriver driver) {
         this.driver = driver;
@@ -18,16 +19,16 @@ public class HorizontalSliderPage {
         driver.get(baseUrl + path);
     }
 
-    public void moveSliderRight() {
+    public void moveSliderRight(int xOffset) {
         WebElement sliderElement = driver.findElement(slider);
         new Actions(driver).clickAndHold(sliderElement)
-                .moveByOffset(50, 0)
+                .moveByOffset(xOffset, 0)
                 .release()
                 .perform();
     }
 
     public String getSliderValue() {
-        return driver.findElement(By.id("range")).getText();
+        return driver.findElement(rangeValue).getText();
     }
 }
 

@@ -19,5 +19,9 @@ public class GeolocationPage {
     public void clickWhereAmI() {
         driver.findElement(whereAmIButton).click();
     }
+    
+    public String getPageSource() {
+        return driver.getPageSource();
+    }
 }
 

@@ -18,20 +18,22 @@ public class JavaScriptAlertsPage {
         this.driver = driver;
     }
 
-    public void clickJsAlert() {
-        driver.findElement(jsAlertBtn).click();
+    public void openPage(String baseUrl, String path) {
+        driver.get(baseUrl + path);
+    }
+    
+    public void clickAlert(String type) {
+        if (type.equalsIgnoreCase("alert")) {
+            driver.findElement(jsAlertBtn).click();
+        } 
+        else if (type.equalsIgnoreCase("confirm")) {
+            driver.findElement(jsConfirmBtn).click();
+        } 
+        else if (type.equalsIgnoreCase("prompt")) {
+            driver.findElement(jsPromptBtn).click();
+        }
     }
 
-    public void clickJsConfirm() {
-        driver.findElement(jsConfirmBtn).click();
-    }
-
-    public void clickJsPrompt() {
-        driver.findElement(jsPromptBtn).click();
-    }
-
-    public String getResultText() {
-        return driver.findElement(resultText).getText();
-    }
+ 
 }
 

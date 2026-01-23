@@ -4,14 +4,16 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import herokuapp.basetest.BaseTest;
+import herokuapp.dataprovider.TestDataProvider;
 import herokuapp.pages.DynamicControlsPage;
 import herokuapp.utility.ConfigReader;
 import herokuapp.utility.WaitUtils;
 
 public class DynamicControlsTest extends BaseTest {
 
-    @Test
-    public void verifyTextboxGetsEnabled() {
+    @Test(dataProvider = "actionData", 
+            dataProviderClass = TestDataProvider.class)
+    public void verifyTextboxGetsEnabled(boolean enable) {
 
         DynamicControlsPage page = new DynamicControlsPage(driver);
 
@@ -23,7 +25,7 @@ public class DynamicControlsTest extends BaseTest {
         page.clickEnableButton();
 
         WaitUtils.waitForElementClickable(driver,
-                org.openqa.selenium.By.cssSelector("input[type='text']"));
+        		page.getInputLocator());
 
         Assert.assertTrue(
                 page.isInputEnabled(),

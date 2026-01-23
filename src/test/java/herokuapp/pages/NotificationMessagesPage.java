@@ -20,7 +20,7 @@ public class NotificationMessagesPage {
         driver.findElement(clickHereLink).click();
     }
 
-    public boolean isNotificationDisplayed() {
-        return driver.getPageSource().contains("Action");
+    public String  isNotificationDisplayed() {
+        return driver.getPageSource();
     }
 }

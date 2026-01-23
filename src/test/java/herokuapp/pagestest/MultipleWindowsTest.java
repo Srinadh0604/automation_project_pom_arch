@@ -8,14 +8,15 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import herokuapp.basetest.BaseTest;
+import herokuapp.dataprovider.TestDataProvider;
 import herokuapp.pages.MultipleWindowsPage;
 import herokuapp.utility.ConfigReader;
 
 
 public class MultipleWindowsTest extends BaseTest {
 
-    @Test
-    public void verifyMultipleWindowsHandling() {
+    @Test(dataProvider = "windowsData", dataProviderClass = TestDataProvider.class)
+    public void verifyMultipleWindowsHandling(String expectedText) {
 
         System.out.println("===== Multiple Windows Test Started =====");
 
@@ -50,7 +51,7 @@ public class MultipleWindowsTest extends BaseTest {
         String text = page.getNewWindowText();
         System.out.println("Text in new window: " + text);
 
-        Assert.assertEquals(text, "New Window",
+        Assert.assertEquals(text, expectedText,
                 "New window text is incorrect");
 
         // Switch back to parent window

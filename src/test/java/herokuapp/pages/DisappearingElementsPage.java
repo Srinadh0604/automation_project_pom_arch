@@ -18,8 +18,8 @@ public class DisappearingElementsPage {
         driver.get(baseUrl + path);
     }
 
-    public List<WebElement> getMenuItems() {
-        return driver.findElements(menuItems);
+    public int getMenuCount() {
+        return driver.findElements(menuItems).size();
     }
 }
 

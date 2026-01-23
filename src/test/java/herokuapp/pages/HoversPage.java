@@ -23,8 +23,8 @@ public class HoversPage {
         new Actions(driver).moveToElement(image).perform();
     }
 
-    public boolean isCaptionVisible() {
-        return driver.getPageSource().contains("name");
+    public String getPageSource() {
+        return driver.getPageSource();
     }
 }
 

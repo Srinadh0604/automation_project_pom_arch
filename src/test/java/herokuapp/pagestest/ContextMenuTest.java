@@ -5,6 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import herokuapp.basetest.BaseTest;
+import herokuapp.dataprovider.TestDataProvider;
 import herokuapp.pages.ContextMenuPage;
 import herokuapp.utility.ConfigReader;
 
@@ -13,8 +14,8 @@ import herokuapp.utility.ConfigReader;
 
 public class ContextMenuTest extends BaseTest {
 
-    @Test
-    public void verifyRightClickShowsAlert() {
+    @Test(dataProvider = "contextMenuData", dataProviderClass = TestDataProvider.class)
+    public void verifyRightClickShowsAlert(boolean run) {
 
         ContextMenuPage page = new ContextMenuPage(driver);
 
@@ -25,12 +26,13 @@ public class ContextMenuTest extends BaseTest {
 
         page.rightClickOnBox();
 
-        Alert alert = driver.switchTo().alert();
+        String alertText = driver.switchTo().alert().getText();
+        driver.switchTo().alert().accept();
         Assert.assertTrue(
-                alert.getText().contains("You selected"),
+        		alertText.contains("You selected"),
                 "Context menu alert not displayed"
         );
-        alert.accept();
+        
     }
 }
 

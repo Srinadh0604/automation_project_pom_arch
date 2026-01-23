@@ -4,13 +4,14 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import herokuapp.basetest.BaseTest;
+import herokuapp.dataprovider.TestDataProvider;
 import herokuapp.pages.HoversPage;
 import herokuapp.utility.ConfigReader;
 
 public class HoversTest extends BaseTest {
 
-    @Test
-    public void verifyHoverDisplaysCaption() {
+    @Test(dataProvider = "hoversData", dataProviderClass = TestDataProvider.class)
+    public void verifyHoverDisplaysCaption(String expectedText) {
 
         HoversPage page = new HoversPage(driver);
 
@@ -22,7 +23,7 @@ public class HoversTest extends BaseTest {
         page.hoverOnFirstImage();
 
         Assert.assertTrue(
-                page.isCaptionVisible(),
+        		page.getPageSource().contains(expectedText),
                 "Hover caption not displayed"
         );
     }

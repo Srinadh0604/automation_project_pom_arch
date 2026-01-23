@@ -15,9 +15,9 @@ public class AbTestingClass{
     public void openABTestingPage(String baseUrl, String path) {
         driver.get(baseUrl + path);
     }
-
-    public boolean isABTestTextPresent() {
-        return driver.getPageSource().contains("A/B Test");
+    
+    public String getPageSourceText() {
+        return driver.getPageSource();   
     }
 }
 

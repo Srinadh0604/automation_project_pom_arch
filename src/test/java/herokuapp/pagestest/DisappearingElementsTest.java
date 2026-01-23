@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import herokuapp.basetest.BaseTest;
+import herokuapp.dataprovider.TestDataProvider;
 import herokuapp.pages.DisappearingElementsPage;
 import herokuapp.utility.ConfigReader;
 
@@ -22,7 +23,7 @@ public class DisappearingElementsTest extends BaseTest {
         );
 
         Assert.assertTrue(
-                page.getMenuItems().size() > 0,
+                page.getMenuCount() > 0,
                 "Menu items not displayed"
         );
     }

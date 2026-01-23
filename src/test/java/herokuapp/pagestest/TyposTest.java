@@ -4,14 +4,15 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import herokuapp.basetest.BaseTest;
+import herokuapp.dataprovider.TestDataProvider;
 import herokuapp.pages.TyposPage;
 import herokuapp.utility.ConfigReader;
 
 
 public class TyposTest extends BaseTest {
 
-    @Test
-    public void verifyTyposTextDisplayed() {
+    @Test(dataProvider = "typosData", dataProviderClass = TestDataProvider.class)
+    public void verifyTyposTextDisplayed(String expectedText) {
 
         TyposPage page = new TyposPage(driver);
 
@@ -21,7 +22,7 @@ public class TyposTest extends BaseTest {
         );
 
         Assert.assertTrue(
-                page.getPageSource().contains("Sometimes"),
+                page.getPageSource().contains(expectedText),
                 "Expected text not displayed on Typos page"
         );
     }

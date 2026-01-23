@@ -6,13 +6,14 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import herokuapp.basetest.BaseTest;
+import herokuapp.dataprovider.TestDataProvider;
 import herokuapp.pages.AddRemoveElementsPage;
 import herokuapp.utility.ConfigReader;
 
 public class AddRemoveElementsTest extends BaseTest {
 
-    @Test
-    public void verifyAddAndRemoveElements() {
+    @Test(dataProvider = "addRemoveData", dataProviderClass = TestDataProvider.class)
+    public void verifyAddAndRemoveElements(int count) {
 
 //        driver.get("https://the-internet.herokuapp.com/add_remove_elements/");
     	driver.get(
@@ -21,20 +22,12 @@ public class AddRemoveElementsTest extends BaseTest {
     		);
 
         AddRemoveElementsPage page = new AddRemoveElementsPage(driver);
+    
+            page.clickAddElement(count);
 
-        // Add 5 elements
-        for (int i = 0; i < 5; i++) {
-            page.clickAddElement();
-        }
+        Assert.assertEquals(page.getDeleteButtonsCount(), count,
+                "Incorrect number of delete buttons");
 
-        Assert.assertEquals(page.getDeleteButtonsCount(), 5,
-                "Delete buttons count mismatch");
-
-        // Remove one element
-        page.deleteOneElement();
-
-        Assert.assertEquals(page.getDeleteButtonsCount(), 4,
-                "Delete button not removed properly");
     }
 }
 

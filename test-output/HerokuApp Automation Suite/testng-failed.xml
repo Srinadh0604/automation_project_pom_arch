@@ -4,15 +4,15 @@
   <parameter name="browser" value="chrome"/>
   <test thread-count="5" name="Smoke Tests(failed)">
     <classes>
-      <class name="herokuapp.pagestest.DynamicControlsTest">
+      <class name="herokuapp.pagestest.ContextMenuTest">
         <methods>
-          <include name="verifyTextboxGetsEnabled"/>
           <include name="setUp"/>
           <include name="startReport"/>
           <include name="tearDown"/>
+          <include name="verifyRightClickShowsAlert"/>
           <include name="flushReport"/>
         </methods>
-      </class> <!-- herokuapp.pagestest.DynamicControlsTest -->
+      </class> <!-- herokuapp.pagestest.ContextMenuTest -->
     </classes>
   </test> <!-- Smoke Tests(failed) -->
 </suite> <!-- Failed suite [HerokuApp Automation Suite] -->

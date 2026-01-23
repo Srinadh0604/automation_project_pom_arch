@@ -6,14 +6,15 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import herokuapp.basetest.BaseTest;
+import herokuapp.dataprovider.TestDataProvider;
 import herokuapp.pages.DropdownPage;
 import herokuapp.utility.ConfigReader;
 
 
 public class DropdownTest extends BaseTest {
 
-    @Test
-    public void verifyDropdownSelection() {
+	@Test(dataProvider = "dropdownData", dataProviderClass = TestDataProvider.class)
+    public void verifyDropdownSelection(String option) {
 
         
 
@@ -33,7 +34,8 @@ public class DropdownTest extends BaseTest {
                 "Default dropdown option is incorrect");
 
         // Select Option 1
-        page.selectOptionByVisibleText("Option 1");
+//        page.selectOptionByVisibleText("Option 1");
+        page.selectOptionByVisibleText(option);
         System.out.println("Selected Option 1");
 
         Assert.assertEquals(page.getSelectedOption(), "Option 1",

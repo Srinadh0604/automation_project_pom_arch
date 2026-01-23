@@ -1,9 +1,11 @@
 package herokuapp.pagestest;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import herokuapp.basetest.BaseTest;
+import herokuapp.dataprovider.TestDataProvider;
 import herokuapp.pages.StatusCodesPage;
 import herokuapp.utility.ConfigReader;
 
@@ -11,8 +13,8 @@ import herokuapp.utility.ConfigReader;
 
 public class StatusCodesTest extends BaseTest {
 
-    @Test
-    public void verify200StatusCodePage() {
+    @Test(dataProvider = "statusCodeData", dataProviderClass = TestDataProvider.class)
+    public void verify200StatusCodePage(String code, String expectedText) {
 
         StatusCodesPage page = new StatusCodesPage(driver);
 
@@ -21,10 +23,10 @@ public class StatusCodesTest extends BaseTest {
                 ConfigReader.get("statusCodesUrl")
         );
 
-        page.click200Status();
+       driver.findElement(By.linkText(code)).click();
 
         Assert.assertTrue(
-                page.is200MessageDisplayed(),
+                page.getPageSourceText().contains(expectedText),
                 "200 status code page not displayed"
         );
     }

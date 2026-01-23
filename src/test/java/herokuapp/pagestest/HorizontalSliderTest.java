@@ -4,14 +4,15 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import herokuapp.basetest.BaseTest;
+import herokuapp.dataprovider.TestDataProvider;
 import herokuapp.pages.HorizontalSliderPage;
 import herokuapp.utility.ConfigReader;
 
 
 public class HorizontalSliderTest extends BaseTest {
 
-    @Test
-    public void verifySliderMoves() {
+    @Test(dataProvider = "sliderData", dataProviderClass = TestDataProvider.class)
+    public void verifySliderMoves(int offset) {
 
         HorizontalSliderPage page = new HorizontalSliderPage(driver);
 
@@ -21,7 +22,7 @@ public class HorizontalSliderTest extends BaseTest {
         );
 
         String before = page.getSliderValue();
-        page.moveSliderRight();
+        page.moveSliderRight(offset);
         String after = page.getSliderValue();
 
         Assert.assertNotEquals(

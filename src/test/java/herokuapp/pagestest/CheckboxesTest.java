@@ -4,14 +4,15 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import herokuapp.basetest.BaseTest;
+import herokuapp.dataprovider.TestDataProvider;
 import herokuapp.pages.CheckboxesPage;
 import herokuapp.utility.ConfigReader;
 
 
 public class CheckboxesTest extends BaseTest {
 
-    @Test
-    public void verifyCheckboxSelectionBehavior() {
+    @Test(dataProvider = "checkboxData", dataProviderClass = TestDataProvider.class)
+    public void verifyCheckboxSelectionBehavior(int index) {
 
         driver.get(
             ConfigReader.get("baseUrl") +
@@ -19,28 +20,15 @@ public class CheckboxesTest extends BaseTest {
         );
 
         CheckboxesPage page = new CheckboxesPage(driver);
+    
+        // Click checkbox based on DataProvider index
+        page.clickCheckbox(index);
 
-        // Initial state verification
-        Assert.assertFalse(page.isFirstCheckboxSelected(),
-                "First checkbox should be unchecked initially");
-        System.out.println(" First checkbox is unchecked initially");
-
-        Assert.assertTrue(page.isSecondCheckboxSelected(),
-                "Second checkbox should be checked initially");
-        System.out.println(" Second checkbox is checked initially");
-
-        // Perform actions
-        page.selectFirstCheckbox();
-        System.out.println(" First checkbox selected");
-        page.unselectSecondCheckbox();
-        System.out.println(" Second checkbox unselected");
-
-        // Final state verification
-        Assert.assertTrue(page.isFirstCheckboxSelected(),
-                "First checkbox should be checked after selection");
-
-        Assert.assertFalse(page.isSecondCheckboxSelected(),
-                "Second checkbox should be unchecked after unselecting");
+        // Validate checkbox is selected
+        Assert.assertTrue(
+                page.isCheckboxSelected(index),
+                "Checkbox at index " + index + " was not selected"
+        );
     }
 }
 

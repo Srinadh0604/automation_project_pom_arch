@@ -7,6 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import herokuapp.basetest.BaseTest;
+import herokuapp.dataprovider.TestDataProvider;
 import herokuapp.pages.DynamicLoadingPage;
 import herokuapp.utility.ConfigReader;
 import herokuapp.utility.WaitUtils;
@@ -14,10 +15,12 @@ import herokuapp.utility.WaitUtils;
 
 public class DynamicLoadingTest extends BaseTest {
 
-    @Test
-    public void verifyDynamicLoading() {
+    @Test(dataProvider = "dynamicLoadingData", dataProviderClass = TestDataProvider.class)
+    public void verifyDynamicLoading(String expectedText) {
 
         System.out.println(" Dynamic Loading Test Started");
+        
+        DynamicLoadingPage page = new DynamicLoadingPage(driver);
 
         driver.get(
             ConfigReader.get("baseUrl") +
@@ -25,22 +28,18 @@ public class DynamicLoadingTest extends BaseTest {
         );
         System.out.println("Navigated to Dynamic Loading page");
 
-        DynamicLoadingPage page = new DynamicLoadingPage(driver);
 
         page.clickStart();
         System.out.println("Clicked Start button");
 
         // Explicit wait
-        WaitUtils.waitForVisibility(
+        WaitUtils.waitForElementVisible(
                 driver, page.getHelloTextLocator());
 
-        String text =
-            driver.findElement(By.id("finish")).getText();
+        
 
-        System.out.println("Loaded text: " + text);
-
-        Assert.assertTrue(text.contains("Hello World"),
-                "Expected text not displayed");
+        Assert.assertTrue( driver.getPageSource().contains(expectedText),
+                "Dynamic text not loaded");
 
         System.out.println("===== Dynamic Loading Test Completed Successfully =====");
     }

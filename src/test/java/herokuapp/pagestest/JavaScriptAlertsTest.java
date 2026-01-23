@@ -7,54 +7,39 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import herokuapp.basetest.BaseTest;
+import herokuapp.dataprovider.TestDataProvider;
 import herokuapp.pages.JavaScriptAlertsPage;
 import herokuapp.utility.ConfigReader;
 
 
 public class JavaScriptAlertsTest extends BaseTest {
 
-    @Test
-    public void verifyJavaScriptAlerts() {
+	@Test(dataProvider = "jsAlertsData", dataProviderClass = TestDataProvider.class)
+    public void verifyJavaScriptAlerts(String type, String expectedResult) {
 
-        driver.get(
-            ConfigReader.get("baseUrl") +
-            ConfigReader.get("alertsUrl")
-        );
+		JavaScriptAlertsPage page = new JavaScriptAlertsPage(driver);
+		
+    	  page.openPage(
+                  ConfigReader.get("baseUrl"),
+                  ConfigReader.get("alertsUrl")
+          );
+    	  
         System.out.println("Navigated to JavaScript Alerts page");
+ 
+     // Click respective alert button
+        page.clickAlert(type);
 
-        JavaScriptAlertsPage page = new JavaScriptAlertsPage(driver);
+        Alert  alert = driver.switchTo().alert();
+        
+        // Handle prompt separately
+        if (type.equalsIgnoreCase("prompt")) {
+            alert.sendKeys("Selenium");
+        }
 
-        /* ---------- JS ALERT ---------- */
-        page.clickJsAlert();
-        System.out.println("Clicked JS Alert button");
-
-        Alert alert = driver.switchTo().alert();
-        System.out.println("Alert text: " + alert.getText());
         alert.accept();
 
-        Assert.assertTrue(page.getResultText().contains("You successfully clicked an alert"),
-                "JS Alert result text mismatch");
-
-        /* ---------- JS CONFIRM ---------- */
-        page.clickJsConfirm();
-        System.out.println("Clicked JS Confirm button");
-
-        alert = driver.switchTo().alert();
-        alert.dismiss();
-
-        Assert.assertTrue(page.getResultText().contains("You clicked: Cancel"),
-                "JS Confirm cancel action failed");
-
-        /* ---------- JS PROMPT ---------- */
-        page.clickJsPrompt();
-        System.out.println("Clicked JS Prompt button");
-
-        alert = driver.switchTo().alert();
-        alert.sendKeys("Srinadh");
-        alert.accept();
-
-        Assert.assertTrue(page.getResultText().contains("Srinadh"),
-                "JS Prompt input not reflected");
+        Assert.assertTrue(driver.getPageSource().contains(expectedResult),
+        		"Alert handling failed for type: " + type);
 
         System.out.println("JavaScript Alerts Test Completed Successfully ");
     }

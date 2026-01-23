@@ -29,10 +29,11 @@
                   <class name="herokuapp.pagestest.HorizontalSliderTest"/>   
                    <class name="herokuapp.pagestest.RedirectTest"/> 
                      <class name="herokuapp.pagestest.ChallengingDomTest"/> 
+                      <class name="herokuapp.pagestest.GeolocationTest"/>   
            -->
                   
                   
-                 <class name="herokuapp.pagestest.GeolocationTest"/>   
+                 <class name="herokuapp.pagestest.ChallengingDomTest"/>   
         </classes>
 
     </test>

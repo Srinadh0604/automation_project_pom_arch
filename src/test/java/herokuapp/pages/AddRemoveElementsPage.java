@@ -14,21 +14,22 @@ public class AddRemoveElementsPage {
         this.driver = driver;
     }
 
-    public void clickAddElement() {
-        driver.findElement(addButton).click();
-        System.out.println("AddElement Clicked");
+    public void clickAddElement(int times) {
+        for (int i = 0; i < times; i++) {
+            driver.findElement(addButton).click();
+        }
     }
 
     public int getDeleteButtonsCount() {
         return driver.findElements(deleteButtons).size();
     }
 
-    public boolean isDeleteButtonPresent() {
-        return getDeleteButtonsCount() > 0;
-    }
+//    public boolean isDeleteButtonPresent() {
+//        return getDeleteButtonsCount() > 0;
+//    }
 
-    public void deleteOneElement() {
-        driver.findElements(deleteButtons).get(0).click();
-        System.out.println("DeleteElement Clicked");
-    }
+//    public void deleteOneElement() {
+//        driver.findElements(deleteButtons).get(0).click();
+//        System.out.println("DeleteElement Clicked");
+//    }
 }

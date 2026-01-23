@@ -21,27 +21,16 @@ public class CheckboxesPage {
         return driver.findElements(checkboxes);
     }
 
-    // Checkbox 1
-    public boolean isFirstCheckboxSelected() {
-        return getAllCheckboxes().get(0).isSelected();
-    }
-
-    public void selectFirstCheckbox() {
-        if (!isFirstCheckboxSelected()) {
-            getAllCheckboxes().get(0).click();
+        // Click checkbox by index
+        public void clickCheckbox(int index) {
+            driver.findElements(checkboxes).get(index).click();
         }
-    }
-
-    // Checkbox 2
-    public boolean isSecondCheckboxSelected() {
-        return getAllCheckboxes().get(1).isSelected();
-    }
-
-    public void unselectSecondCheckbox() {
-        if (isSecondCheckboxSelected()) {
-            getAllCheckboxes().get(1).click();
+        
+        // Check if checkbox is selected
+        public boolean isCheckboxSelected(int index) {
+            return driver.findElements(checkboxes).get(index).isSelected();
         }
-    }
+    
 }
 
 

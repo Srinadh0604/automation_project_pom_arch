@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import herokuapp.basetest.BaseTest;
+import herokuapp.dataprovider.TestDataProvider;
 import herokuapp.pages.DragDropPage;
 import herokuapp.utility.ConfigReader;
 
@@ -11,8 +12,8 @@ import herokuapp.utility.ConfigReader;
 
 public class DragDropTest extends BaseTest {
 
-    @Test
-    public void verifyDragAndDrop() {
+    @Test(dataProvider = "dragDropData", dataProviderClass = TestDataProvider.class)
+    public void verifyDragAndDrop(boolean run) {
 
         DragDropPage page = new DragDropPage(driver);
 
@@ -23,7 +24,7 @@ public class DragDropTest extends BaseTest {
 
         page.dragAToB();
 
-        Assert.assertTrue(true, "Drag and drop executed");
+        Assert.assertTrue(run, "Drag and drop executed");
     }
 }
 

@@ -16,8 +16,10 @@ public class InfiniteScrollPage {
         driver.get(baseUrl + path);
     }
 
-    public void scrollDown() {
+    public void scrollDown(int times) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+        for (int i = 0; i < times; i++) {
+            js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+        }
     }
 }

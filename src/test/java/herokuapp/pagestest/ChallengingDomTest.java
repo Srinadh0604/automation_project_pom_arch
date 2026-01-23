@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import herokuapp.basetest.BaseTest;
+import herokuapp.dataprovider.TestDataProvider;
 import herokuapp.pages.ChallengingDomPage;
 import herokuapp.utility.ConfigReader;
 
@@ -11,8 +12,8 @@ import herokuapp.utility.ConfigReader;
 
 public class ChallengingDomTest extends BaseTest {
 
-    @Test
-    public void verifyButtonClickWorks() {
+    @Test(dataProvider = "domData", dataProviderClass = TestDataProvider.class)
+    public void verifyButtonClickWorks(boolean click) {
 
         ChallengingDomPage page = new ChallengingDomPage(driver);
 
@@ -23,7 +24,7 @@ public class ChallengingDomTest extends BaseTest {
 
         page.clickBlueButton();
 
-        Assert.assertTrue(true, "Button clicked successfully");
+        Assert.assertTrue(click, "Button clicked successfully");
     }
 }
 
